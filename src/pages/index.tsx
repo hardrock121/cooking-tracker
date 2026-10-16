@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../lib/db";
+import db from "../lib/db";
 import { AddDishForm } from "../components/AddDishForm";
 import { DishCard } from "../components/DishCard";
 import { MealSelector } from "../components/MealSelector";
@@ -25,10 +25,10 @@ export default function Home() {
     imageUrl?: string,
     notes?: string
   ) => {
-    const result = db.insertDish(name, category, imageUrl, notes);
-    if (result) {
+    const newDishId = db.insertDish(name, category, imageUrl, notes);
+    if (newDishId) {
       const newDish: Dish = {
-        id: result.lastInsertRowid,
+        id: newDishId,
         name,
         category,
         image_url: imageUrl || null,

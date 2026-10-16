@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../lib/db";
+import db from "../lib/db";
 import { DishCard } from "../components/DishCard";
 
 interface Meal {
@@ -10,6 +10,7 @@ interface Meal {
   image_url: string | null;
   meal_type: string;
   date: string;
+  notes: string;
 }
 
 export default function Calendar() {
@@ -122,7 +123,7 @@ export default function Calendar() {
                     setAddMealNotes(meal.notes || "");
                   }}
                 >
-                  <img src={meal.image_url} alt={meal.dish_name} />
+                  <img src={meal.image_url || "/placeholder-food.png"} alt={meal.dish_name} />
                   <span>{meal.dish_name}</span>
                 </button>
               ))}

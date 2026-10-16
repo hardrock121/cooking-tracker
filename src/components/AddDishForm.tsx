@@ -1,5 +1,5 @@
 import React, { useState, useRef, ChangeEvent } from "react";
-import { db } from "../lib/db";
+import db from "../lib/db";
 
 interface AddDishFormProps {
   onAddDish: (name: string, category: string, imageUrl?: string, notes?: string) => void;

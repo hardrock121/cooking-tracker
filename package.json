@@ -8,13 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "bun-types": "latest",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "sqlite": "5.1.1",
-    "bun-types": "latest"
+    "sql.js": "^1.15.0",
+    "sqlite": "5.1.1"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
     "@types/node": "20.14.10",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
